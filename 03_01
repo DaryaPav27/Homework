@@ -1,0 +1,62 @@
+#include <iostream>
+using namespace std;
+ 
+int main()
+{
+ //hometask 1
+ int t;
+ float s, v;
+ cout << "Enter the distance " \n;
+ cin >> s;
+ cout << "Enter the time " \n;
+ cin >> t;
+ v = s / t;
+ cout << "Speed: ";
+ cout << v << " (km/min)";
+ 
+ //hometask 2
+ int h1, m1, s1, h2, m2, s2, price;
+ float t1, t2, t, Summa;
+ price = 2;
+ cout << "Start time "\n;
+ cout << "Enter hours:\n;
+ cin >> h1;
+ cout << "Enter minutes:\n;
+ cin >> m1;
+ cout << "Enter seconds:\n;
+ cin >> s1;
+ cout << "End time "\n;
+ cout << "Enter hours:\n;
+ cin >> h2;
+ cout << "Enter minutes:\n;
+ cin >> m2;
+ cout << "Enter seconds:\n;
+ cin >> s2;
+ t1 = h1 * 60 + m1 + s1 / 60;
+ t2 = h2 * 60 + m2 + s2 / 60;
+ t = t2 - t1;
+ Summa = price * t;
+ cout << "The trip cost: " << Summa << " grn.";
+ 
+ 
+ //hometask 3
+ 
+ float s, p1, p2, p3, petrol, Summa1,
+ Summa2, Summa3;
+ cout << "Enter the distance :"\n;
+ cin >> s;
+ cout << "Enter the price of petrol1 :"\n;
+ cin >> p1;
+ cout << "Enter the price of petrol2 :"\n;
+ cin >> p2;
+ cout << "Enter the price of petrol3 :"\n;
+ cin >> p3;
+ cout << "Enter the petrol consumption: "\n;
+ cin >> petrol;
+ Summa1 = s * p1 * petrol / 100;
+ Summa2 = s * p2 * petrol / 100;
+ Summa3 = s * p3 * petrol / 100;
+ cout << "|petrol type|trip cost|"\n;
+ cout << "Petrol1\t\t" << Summa1 \n;
+ cout << "Petrol2\t\t" << Summa2 \n;
+ cout << "Petrol3\t\t" << Summa3 \n;
