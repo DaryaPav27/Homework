@@ -1,0 +1,37 @@
+#include <iostream>
+using namespace std;
+ 
+int main()
+{
+ // hometask 1  
+    
+ int time, h, m, sec, h1, m1, sec1, temp;
+ cout << "Enter time in seconds:\n";
+ cin >> time;
+ h = time / 3600;
+ temp = time % 3600;
+ m = temp / 60;
+ sec = temp % 60;
+ cout << "Now:" << h << ":";
+ cout << m << ":";
+ cout << sec << "\n";
+ temp = 86400 - time;
+ h1 = temp / 3600;
+ temp = temp % 3600;
+ m1 = temp / 60;
+ sec1 = temp % 60;
+ cout << "Time until midnight:" << h1 << ":";
+ cout << m1 << ":" << sec1 << "\n";
+    
+ 
+// hometask 2
+     
+ int time, h,temp;
+ cout << "Enter time since the beginning of the workday in seconds:"\n;
+ cin >> time;
+ temp = 28800 - time;
+ h = temp / 3600;
+ cout << "Time until the end of the workday:";
+ cout << h << "\n";
+    
+}
