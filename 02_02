@@ -1,0 +1,72 @@
+
+#include <iostream>
+using namespace std;
+int main()
+{
+    /*
+    homework 1
+    int sec, min, hours;
+    cout << "seconds : ";
+    cin >> sec;
+
+    min = sec / 60;
+    hours = min / 60;
+    sec = sec % 60;
+
+    cout << "hours : " << hours;
+    cout << "minuts : " << min;
+    cout << "seconds : " << sec;
+    
+    homework 2
+
+    double number; 
+    int dollar, cent;
+    cout << "number : ";
+    cin >> number;
+    dollar = number;
+    cent = (number - dollar) * 100;
+    cout << dollar << " dollars ";
+    cout << cent << " cents";
+   
+
+    int days, weeks;
+    cout << "days: ";
+    cin >> days;
+
+    weeks = days / 7;
+    days = days % 7;
+
+    cout << "weeks : " << weeks << "\n";
+    cout << "days : " << days << "\n";
+ 
+ homework 3
+
+    Вычисление скорости бега
+        Введите длину дистанции(метров) = 1000
+        Введите время(мин.сек) = 3.25
+        Дистанция: 1000 м
+        Время : 3 мин 25 сек = 205 сек
+        Вы бежали со скоростью 17.56 км / ч
+        
+
+    double speed, distance, time;
+    int minutes, seconds;
+    cout << "Вычисление скорости бега";
+    cout << " Введите длину дистанции = ";
+    cin >> distance;
+    cout << " Введите время = ";
+    cin >> time;
+    minutes = time;
+    seconds = (time — minutes) * 100;
+    time = (minutes * 60) + seconds;
+    speed = distance / time * 3.6;
+    cout << "Дистанция: " << distance << "m\n";
+    cout << "Время: " << minutes << " min " <<
+        seconds << " sec = " << time <<
+        " seconds\n";
+    cout << "Вы бежали со скоростью " <<
+        speed << "km/h\n";
+ */
+
+
+
