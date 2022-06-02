@@ -1,0 +1,142 @@
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    Задание 1
+    int num, n1, n2, n3, n4, n5, n6, sum1,
+        sum2, temp;
+    cout << "Enter number:\n";
+    cin >> num;
+    if (num / 100000 < 1)
+    {
+        cout << "Number includes less than 6 digits!\n";
+    }
+    else if (num / 100000 > 9)
+    {
+        cout << "Number includes more than 6 digits!\n";
+    else
+    {
+        cout << "Number includes exactly 6 digits!\n";
+        n6 = num % 10;
+        temp = num / 10;
+        n5 = temp % 10;
+        temp = temp / 10;
+        n4 = temp % 10;
+        temp = temp / 10;
+        n3 = temp % 10;
+        temp = temp / 10;
+        n2 = temp % 10;
+        n1 = temp / 10;
+        cout << n1 << " " << n2 << " " << n3 << " ";
+        cout << n4 << " " << n5 << " " << n6;
+        sum1 = n1 + n2 + n3;
+        sum2 = n4 + n5 + n6;
+     if (sum1 == sum2)
+        {
+            cout << "Number is lucky!";
+        }
+        else
+        {
+            cout << "Error!";
+        }
+    }
+
+    Задание 2
+
+    int num, n1, n2, n3, n4, new_num, temp;
+    cout << "Enter number:\n";
+    cin >> num;
+    if (num / 1000 < 1)
+    {
+        cout << "Number includes less than 4 digits!\n";
+    }
+    else if (num / 1000 > 9)
+    {
+        cout << "Number includes more than 4 digits!\n";
+    }
+    else
+    {
+        cout << "Number includes exactly 4 digits!\n";
+        n4 = num % 10;
+        temp = num / 10;
+        n3 = temp % 10;
+        temp = temp / 10;
+        n2 = temp % 10;
+        n1 = temp / 10;
+        cout << "Number in digits: \n";
+        cout << n1 << " " << n2 << " " << n3 << " ";
+        cout << n4 << " Error \n";
+        new_num = n2 * 1000 + n1 * 100 + n4 * 10 + n3;
+        cout << "New number: " << new_num;
+    }
+}
+
+   Задание 3
+    
+    int n1, n2, n3, n4, n5, n6, n7, nmax;
+    cout << "Please, enter 7 numbers";
+    cin >> n1;
+    cin >> n2;
+    cin >> n3;
+    cin >> n4;
+    cin >> n5;
+    cin >> n6;
+    cin >> n7;
+    if (n1 > n2) {
+        nmax = n1;
+    }
+    else nmax = n2;
+    if (n3 > nmax) {
+        nmax = n3;
+    }
+    if (n4 > nmax) {
+        nmax = n4;
+    }
+    if (n5 > nmax) {
+        nmax = n5;
+    }
+    if (n6 > nmax) {
+        nmax = n6;
+    }
+    if (n7 > nmax) {
+        nmax = n7;
+    }
+    cout << "Max number is " << nmax;
+    
+    Задание 4
+    int AB, BC, weight, fuel_use, remaining_liters, fuel_use2, min_fuel;
+    cout << "Please enter distance between points A and B\n";
+    cin >> AB;
+    cout << "Please enter distance between points B and C\n";
+    cin >> BC;
+    cout << "Please enter weight\n";
+    cin >> weight;
+    if (weight <= 500) {
+        fuel_use = AB * 1;
+        fuel_use2 = BC * 1;
+    }
+    else if (weight > 500 && weight <= 1000) {
+        fuel_use = AB * 4;
+        fuel_use2 = BC * 4;
+    }
+    else if (weight > 1000 && weight <= 1500) {
+        fuel_use = AB * 7;
+        fuel_use2 = BC * 7;
+    }
+    else if (weight > 1500 && weight <= 2000) {
+        fuel_use = AB * 9;
+        fuel_use2 = BC * 9;
+    }
+    else 
+        cout << "The plane does not lift\n";
+
+    remaining_liters = 300 - fuel_use;
+    min_fuel = fuel_use2 - remaining_liters;
+    cout << "Minimum amount of fuel for refueling is " << min_fuel;
+
+
+    
+}
+
+
