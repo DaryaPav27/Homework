@@ -1,0 +1,134 @@
+Задание 1
+
+
+#include <iostream>
+using namespace std;
+int main()
+{
+    int num1, quantity1, num2, quantity2,
+        sale1, sale2, sale3, 
+        start_sum1, start_sum2, general_sum, final_sum;
+
+    cout << "Meat pizza - 30$\n"<< "1\n";
+    cout << "Chiken pizza - 20$\n" << "2\n";
+    cout << "Fish pizza - 25$\n" << "3\n";
+    cout << "Cheese pizza - 15$\n" << "4\n";
+    cout << "Tea - 5$\n" << "5\n";
+    cout << "Cofee - 7$\n" << "6\n";
+    cout << "Water - 1$\n" << "7\n";
+    cout << "Please, enter kod of pizza\n";
+    cin >> num1;
+    cout << "Please, enter quantity of pizza\n";
+    cin >> quantity1;
+    cout << "Please, enter kod of drink\n";
+    cin >> num2;
+    cout << "Please, enter quantity of drink\n";
+    cin >> quantity2;
+
+    if (num1 == 1) {
+        start_sum1 = 30 * quantity1;
+        cout << "Meat pizza - " << quantity1 << "p.\n";
+    }
+    else if (num1 == 2) {
+        start_sum1 = 20 * quantity1;
+        cout << "Chiken pizza - " << quantity1 << "p.\n";
+    }
+    else if (num1 == 3) {
+        start_sum1 = 25 * quantity1;
+        cout << "Fish pizza - " << quantity1 << "p.\n";
+    }
+    else if (num1 == 4) {
+        start_sum1 = 15 * quantity1;
+        cout << "Cheese pizza - " << quantity1 << "p.\n";
+    }
+    if (num2 == 5) {
+        start_sum2 = 5 * quantity2;
+        cout << "Tea - " << quantity2 << "p.\n";
+    }
+    else if (num2 == 6) {
+        start_sum2 = 7 * quantity2;
+        cout << "Coffee - " << quantity2 << "p.\n";
+    }
+    else if (num2 == 7) {
+        start_sum2 = 1 * quantity2;
+        cout << "Water - " << quantity2 << "p.\n";
+    }
+
+    general_sum = start_sum1 + start_sum2;
+
+    if (general_sum > 50) {
+        sale1 = general_sum / 5;
+        final_sum = general_sum - sale1;
+    }
+    else if (quantity1 % 5 == 0) {
+        sale2 = start_sum1 / 5;
+        final_sum = general_sum - sale2;
+    }
+    else if (num2 == 5 || 6 && quantity2 >= 3) {
+        sale3 = start_sum2 / 100 * 15;
+        final_sum = general_sum - sale3;
+    }
+
+    cout << "Total: " << final_sum << "$\n";
+
+Задание 2
+
+  int salary1, salary2, salary3, sales_level1, sales_level2, sales_level3, sale_percent1, sale_percent2, sale_percent3;
+    cout << "Enter sales level for 1 manager\n";
+    cin >> sales_level1;
+    cout << "Enter sales level for 2 manager\n";
+    cin >> sales_level2;
+    cout << "Enter sales level for 3 manager\n";
+    cin >> sales_level3;
+
+    if (sales_level1 < 500) {
+        sale_percent1 = sales_level1 / 100 * 3;
+    }
+    else if (sales_level1 >= 500 && sales_level1 < 1000) {
+        sale_percent1 = sales_level1 / 100 * 5;
+    }
+    else if (sales_level1 >= 1000) {
+        sale_percent1 = sales_level1 / 100 * 8;
+    }
+
+    if (sales_level2 < 500) {
+        sale_percent2 = sales_level2 / 100 * 3;
+    }
+    else if (sales_level2 >= 500 && sales_level2 < 1000) {
+        sale_percent2 = sales_level2 / 100 * 5;
+    }
+    else if (sales_level2 >= 1000) {
+        sale_percent2 = sales_level2 / 100 * 8;
+    }
+
+    if (sales_level3 < 500) {
+        sale_percent3 = sales_level3 / 100 * 3;
+    }
+    else if (sales_level3 >= 500 && sales_level3 < 1000) {
+        sale_percent3 = sales_level3 / 100 * 5;
+    }
+    else if (sales_level3 >= 1000) {
+        sale_percent3 = sales_level3 / 100 * 8;
+    }
+
+    salary1 = 200 + sale_percent1 + 200;
+    salary2 = 200 + sale_percent2 + 200;
+    salary3 = 200 + sale_percent3 + 200;
+
+    if (salary1 > salary2 && salary1 > salary3) {
+        cout << "Best manager is manager number - 1\n";
+        cout << "His bonus will be 200$ and salary = " << salary1 << "$";
+    }
+
+    else if (salary2 > salary1 && salary2 > salary3) {
+        cout << "Best manager is manager number - 2\n";
+        cout << "His bonus will be 200$ and salary = " << salary2 << "$";
+
+    }
+    else if (salary3 > salary1 && salary3 > salary2) {
+        cout << "Best manager is manager number - 3\n";
+        cout << "His bonus will be 200$ and salary = " << salary3 << "$";
+
+    }
+    }
+
