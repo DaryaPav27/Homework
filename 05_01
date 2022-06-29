@@ -31,3 +31,26 @@ int main()
 	}
 }
 
+//Задание 2
+#include <iostream>
+using namespace std;
+
+int main()
+{
+	int a, b, c;
+	cout << "Enter the duration of the call in minutes\n";
+	cin >> c;
+	cout << "Enter your operator's code\nmts - 1;\nmegafon - 2;\ntele2 - 3;\n";
+	cin >> a;
+	cout << "Enter your interlocutor's operator code\nmts - 1;\nmegafon - 2;\ntele2 - 3;\n";
+	cin >> b;
+	if (((a == 1) && (b == 1)) || ((a == 2) && (b == 2)) || ((a == 3) && (b == 3))) {
+		cout << "The cost of your call = " << c * 2 << "rub";
+	}
+	if (((a == 1) && (b == 2)) || ((a == 1) && (b == 3)) || ((a == 3) && (b == 1)) || ((a == 3) && (b == 2))) {
+		cout << "The cost of your call = " << c * 3 << "rub";
+	}
+	if (((a == 2) && (b == 1)) || ((a == 2) && (b == 3))) {
+		cout << "The cost of your call = " << c * 4 << "rub";
+	};
+}
