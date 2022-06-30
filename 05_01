@@ -54,3 +54,93 @@ int main()
 		cout << "The cost of your call = " << c * 4 << "rub";
 	};
 }
+
+Задание 3
+
+#include <iostream>
+using namespace std;
+int main()
+{
+	int profit, late, code, fine, choice;
+	float rowPrice, temp;
+	fine = 0;
+	rowPrice = 0.5;
+
+	cout << "Select menu item:\n";
+	cout << "1- profit and number of lateness-> "
+		"number of code lines\n";
+	cout << "2- profit and number of code lines -> "
+		"number of lateness\n";
+	cout << "3- number of lateness and number "
+		"of code lines ->profit\n";
+	cin >> choice;
+	switch (choice)
+	{
+		case 1:
+		{
+			cout << "Profit wished by user\n";
+			cin >> profit;
+			cout << "How many times user was late?\n";
+			cin >> late;
+			code = profit / rowPrice;
+			if (late >= 3)
+			{
+				fine = (late / 3) * 20;
+				code = code + fine / rowPrice;
+			}
+			cout << "number of code lines: " << code;
+			cout << "\n";
+			break;
+		}
+		case 2:
+		{
+			cout << "Profit wished by user\n";
+			cin >> profit;
+			cout << "Input number of code lines\n";
+			cin >> code;
+			temp = code * rowPrice;
+			if (profit >= temp)
+			{
+				cout << "You are not allowed to be late!";
+			}
+			else
+			{
+				late = (temp - profit) / 20 * 3;
+				cout << "You are allowed to be late ";
+				cout << late << " or " << late + 1;
+				cout << " or " << late + 2 << " times";
+			}
+			break;
+		}
+		case 3:
+		{
+			cout << "Number of code lines\n";
+			cin >> code;
+			cout << "How many times user was late?\n";
+			cin >> late;
+			temp = code * rowPrice;
+			if (late >= 3)
+			{
+				fine = late / 3 * 20;
+				if (fine >= temp)
+				{
+					cout << "You’ll get nothing\n";
+				}
+				else
+				{
+					profit = temp - fine;
+					cout << "You’ll get " << profit;
+					cout << "$\n";
+				}
+			}
+			else
+			{
+				profit = temp;
+				cout << "You’ll get " << profit << "$\n";
+			}
+			break;
+		}
+		default:
+			cout << "Wrong input!";
+	}
+}
